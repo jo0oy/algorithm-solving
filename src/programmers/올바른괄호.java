@@ -13,14 +13,14 @@ public class 올바른괄호 {
         for(char c : arr) {
             if(c == '(') { // 여는 괄호인 경우
                 st.push(c);
-            } else { // 닫는 괄호인 경우
+            } else {       // 닫는 괄호인 경우
 
-                if(st.isEmpty()) { // 스택이 비었다. --> 짝인 여는 괄호가 존재하지 않는다.
+                if(st.isEmpty()) {      // 스택이 비었다. --> 짝인 여는 괄호가 존재하지 않는다.
                     answer = false;
                     break;
                 }
 
-                st.pop(); // 짝이 존재하는 경우, 스택에서 pop
+                st.pop();    // 짝이 존재하는 경우, 스택에서 pop
             }
         }
 
