@@ -6,6 +6,7 @@ public class 혼자하는틱택토 {
         int oCnt = 0;
         int xCnt = 0;
 
+        // 'O', 'X'를 각각 카운팅
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 char c = board[i].charAt(j);
@@ -37,6 +38,7 @@ public class 혼자하는틱택토 {
         int cnt = 0;
         for (int i = 0; i < 3; i++) {
             boolean flag = true;
+            // 가로
             for(int j = 0; j < 3; j++) {
                 if(board[i].charAt(j) != c) {
                     flag = false;
@@ -46,6 +48,7 @@ public class 혼자하는틱택토 {
 
             if(flag) cnt++;
 
+            // 세로
             flag = true;
             for (int j = 0; j < 3; j++) {
                 if(board[j].charAt(i) != c) {
@@ -57,6 +60,7 @@ public class 혼자하는틱택토 {
             if(flag) cnt++;
         }
 
+        // 좌, 우 아래로 향하는 대각선
         if((board[0].charAt(0) == c) && (board[1].charAt(1) == c) && (board[2].charAt(2) == c)) cnt++;
         if((board[0].charAt(2) == c) && (board[1].charAt(1) == c) && (board[2].charAt(0) == c)) cnt++;
 
